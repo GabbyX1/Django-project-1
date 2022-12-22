@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<h1>Best Drinks Ever</h1>
+<style>
+   tr { text-align:center;
+        background-color:hotpink}
+   td {
+        border-color:black
+    }
+
+        
+    </style>
+<table 
+    border="1";
+    
+    width="50%";>
+   <tr>
+    <td>Favourite drinks of user;</td>
+    <td>Gabby</td>
+</tr>
+    
+    {% for x in mymembers %}
+    <tr>
+
+        
+        <td>{{ x.id }}</td>
+    <td>{{x.firstname }}</td>
+<td>{{x.lastname }}</td>
+<td><a href="delete/{{ x.id}}">Delete drink</a></td>
+</tr>
+{% endfor %}
+</table>
+
+<p>
+    <a href="add/">Add drink</a>
+</p>
